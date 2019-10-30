@@ -14,7 +14,7 @@ public class MatrixMath
      */
     public MatrixMath(int[][] data)
     {
-        // initialise instance variables
+        this.data = data;// initialise instance variables
     }
 
     /**
@@ -43,7 +43,12 @@ public class MatrixMath
      */
     public double[] rowAve()
     {
-        return null;
+       double[] aveRow = new double[data.length];
+       int[] sums = rowSum();
+       for(int i =0;i<data.length;i++){
+           aveRow[i] = (sums[i]*1.0)/data[i].length;
+        }
+       return aveRow;
     }
     
         /**
@@ -54,8 +59,16 @@ public class MatrixMath
      */
     public int[] colSum()
     {
-        return null;
+        int [] sumCol = new int[data.length];
+        int sum=0;
+        for(int i =0;i<data.length;i++){
+           for(int j=0;j<data[i].length;j++){
+               sum+=data[j][i];
+            }
+            sumCol[i] = sum;
     }
+    return sumCol;
+}
     
      /**
      * Find the average of all the values in each row

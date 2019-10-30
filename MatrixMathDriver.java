@@ -18,19 +18,19 @@ public class MatrixMathDriver
 		/* TODO
 		 * Use Arrays.toString on the results below
 		 */
-        mathA.rowAve();
-        mathA.colSum();
+        //System.out.println(Arrays.toString(mathA.rowAve()));
+        System.out.println(Arrays.toString(mathA.colSum()));
         mathA.colAve();
-        System.out.println(Arrays.toString(mathA.rowSum()));
+        //System.out.println(Arrays.toString(mathA.rowSum()));
         MatrixMath mathB = new MatrixMath(B);
-        mathB.rowSum();
-        mathB.rowAve();
-        mathB.colSum();
+        //System.out.println(Arrays.toString(mathB.rowSum()));
+        //System.out.println(Arrays.toString(mathB.rowAve()));
+        System.out.println(Arrays.toString(mathB.colSum()));
         mathB.colAve();
         MatrixMath mathC = new MatrixMath(C);
-        mathB.rowSum();
-        mathB.rowAve();
-        mathB.colSum();
-        mathB.colAve();
+        //System.out.println(Arrays.toString(mathC.rowSum()));
+        //System.out.println(Arrays.toString(mathC.rowAve()));
+        System.out.println(Arrays.toString(mathA.colSum()));
+        mathC.colAve();
     }
 }
