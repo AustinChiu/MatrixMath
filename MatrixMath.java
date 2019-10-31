@@ -60,24 +60,28 @@ public class MatrixMath
     public int[] colSum()
     {
         int [] sumCol = new int[data.length];
-        int sum=0;
-        for(int i =0;i<data.length;i++){
-           for(int j=0;j<data[i].length;j++){
+        for(int i =0;i<data[i].length;i++){
+            int sum =0;
+           for(int j=0;i<data.length;j++){
                sum+=data[j][i];
+               sumCol[j]= sum;
             }
-            sumCol[i] = sum;
     }
     return sumCol;
-}
-    
-     /**
+}  
+/**
      * Find the average of all the values in each row
      *
      * @return    int[] 
      */
     public double[] colAve()
     {
-        return null;
+      double [] aveCol = new double[data.length];
+      int[] sumses= colSum();
+      for(int i =0;i<data.length;i++){
+          aveCol[i] = (sumses[i]*1.0)/data[i].length;
+        }
+      return aveCol;
     }
     
 }
